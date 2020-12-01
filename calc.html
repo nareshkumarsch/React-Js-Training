@@ -25,8 +25,8 @@
         <legend>Toolbar</legend>
         <div>
             Number
-            <input type='text' id='number' />
-            <input type='button' value='Add To List' onclick=""  />
+            <input type='number' id='number' />
+            <input type='button' value='Add To List' onclick="addToList()"  />
             <input type='button' value='Clear Display' onclick='' />
             <input type='button' value='Reset Calculator' onclick=""   />
 
@@ -63,5 +63,13 @@
 
    
 </body>
-
+<script>
+    function addToList(){
+        var text = document.getElementById("number").value;
+        var ul = document.getElementById("numberList");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(text));
+        ul.appendChild(li);
+    }
+</script>
 </html>
